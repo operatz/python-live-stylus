@@ -26,7 +26,7 @@ def compileFile( filename ):
         print 'Compile the file: %s' % ( filename )
         resultPath = filename[0:-4] + 'css'
         cssFile = open( resultPath , 'w' )
-        cssFile.write( result )
+        cssFile.write( result.encode('utf-8') )
         cssFile.close()
 
 def compileDir( path ):
